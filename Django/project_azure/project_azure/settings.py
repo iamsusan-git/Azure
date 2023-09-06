@@ -75,16 +75,16 @@ WSGI_APPLICATION = 'project_azure.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test1',  # Replace with your database name
-        'USER': 'Azure',  # Replace with your PostgreSQL username
-        'PASSWORD': 'azure7',  # Replace with your PostgreSQL password
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'test1',  # Replace with your database name
+#         'USER': 'Azure',  # Replace with your PostgreSQL username
+#         'PASSWORD': 'azure7',  # Replace with your PostgreSQL password
         
         
-    }
-}
+#     }
+# }
 
 
 
@@ -123,7 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
